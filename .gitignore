@@ -11,6 +11,12 @@ dist-ssr
 *.local
 tsconfig.tsbuildinfo
 
+/cypress/videos/
+/cypress/screenshots/
+
+test-results/
+playwright-report/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -24,3 +30,19 @@ tsconfig.tsbuildinfo
 *.sw?
 .pnp.*
 .pnpm-store/
+
+
+
+# turbo
+.turbo
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# next-pwa
+**/public/workbox-*.js
+**/public/sw.js
+**/public/worker-*.js
