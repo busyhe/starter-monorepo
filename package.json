@@ -1,0 +1,35 @@
+{
+    "name": "starter-monorepo",
+    "type": "module",
+    "version": "0.0.0",
+    "packageManager": "pnpm@9.4.0",
+    "description": "_description_",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "husky"
+    },
+    "keywords": [],
+    "author": "busyhe <busyhe@qq.com>",
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
+    },
+    "homepage": "https://github.com/busyhe/starter-monorepo#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/busyhe/starter-monorepo.git"
+    },
+    "bugs": "https://github.com/busyhe/starter-monorepo/issues",
+    "license": "MIT",
+    "dependencies": {
+        "commitizen": "^4.3.0",
+        "cz-conventional-changelog": "^3.3.0",
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.7"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
