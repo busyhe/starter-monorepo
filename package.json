@@ -6,8 +6,8 @@
   "description": "_description_",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky",
+    "prepare": "is-ci || husky",
+    "preinstall": "npx only-allow pnpm",
     "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -34,10 +34,15 @@
   "devDependencies": {
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.22.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-vitest": "^0.5.4",
+    "eslint-plugin-vue": "^10.0.0",
     "husky": "^9.1.7",
+    "is-ci": "^4.1.0",
     "lint-staged": "^15.4.3",
-    "prettier": "^3.2.5",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "vitepress": "^1.6.3"
   }
 }

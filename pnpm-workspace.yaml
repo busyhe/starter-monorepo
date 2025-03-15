@@ -2,8 +2,6 @@ packages:
   - packages/*
   - packages/core/base/*
   - apps/*
-catalog:
-  prettier: ^3.5.3
-  prettier-plugin-tailwindcss: ^0.6.11
-onlyBuiltDependencies:
-  - esbuild
+# catalog:
+  # prettier: ^3.5.3
+  # prettier-plugin-tailwindcss: ^0.6.11
