@@ -2,7 +2,7 @@
   "name": "starter-monorepo",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@10.6.2",
+  "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac",
   "description": "_description_",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "release": "bumpp package.json apps/*/package.json packages/*/package.json --all"
   },
   "keywords": [],
   "author": "busyhe <busyhe@qq.com>",
@@ -32,6 +33,7 @@
     "pnpm": ">=9.12.0"
   },
   "devDependencies": {
+    "bumpp": "^10.2.0",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.22.0",
