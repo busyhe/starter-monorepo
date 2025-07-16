@@ -6,11 +6,12 @@
   "description": "_description_",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
-    "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
+    "docs:dev": "vitepress dev docs",
     "docs:preview": "vitepress preview docs",
+    "postinstall": "pnpm -r run stub --if-present",
+    "preinstall": "npx only-allow pnpm",
     "prepare": "git config --local core.editor cat",
     "release": "LEFTHOOK=0 bumpp package.json apps/*/package.json packages/*/package.json --all"
   },
@@ -27,16 +28,19 @@
     "node": ">=20.10.0",
     "pnpm": ">=9.12.0"
   },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "eslint": "*"
+      }
+    }
+  },
   "devDependencies": {
+    "@monorepo/prettier-config": "workspace:*",
+    "@monorepo/eslint-config": "workspace:*",
     "bumpp": "catalog:",
-    "eslint": "catalog:",
-    "eslint-plugin-prettier": "catalog:",
-    "eslint-plugin-vitest": "catalog:",
-    "eslint-plugin-vue": "catalog:",
     "lefthook": "catalog:",
-    "lint-staged": "catalog:",
-    "prettier": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:",
-    "vitepress": "catalog:"
+    "vitepress": "catalog:",
+    "unbuild": "catalog:"
   }
 }
