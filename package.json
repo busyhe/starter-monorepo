@@ -1,10 +1,17 @@
 {
   "name": "starter-monorepo",
-  "type": "module",
   "version": "0.1.1",
-  "packageManager": "pnpm@10.12.1",
   "description": "_description_",
-  "main": "index.js",
+  "keywords": [],
+  "homepage": "https://github.com/busyhe/starter-monorepo#readme",
+  "bugs": "https://github.com/busyhe/starter-monorepo/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/busyhe/starter-monorepo.git"
+  },
+  "license": "MIT",
+  "author": "busyhe <busyhe@qq.com>",
+  "type": "module",
   "scripts": {
     "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
     "docs:build": "vitepress build docs",
@@ -15,32 +22,26 @@
     "prepare": "git config --local core.editor cat",
     "release": "LEFTHOOK=0 bumpp package.json apps/*/package.json packages/*/package.json --all"
   },
-  "keywords": [],
-  "author": "busyhe <busyhe@qq.com>",
-  "homepage": "https://github.com/busyhe/starter-monorepo#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/busyhe/starter-monorepo.git"
+  "main": "index.js",
+  "devDependencies": {
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/prettier-config": "workspace:*",
+    "@workspace/tsconfig": "workspace:*",
+    "bumpp": "catalog:",
+    "lefthook": "catalog:",
+    "unbuild": "catalog:",
+    "vitepress": "catalog:"
   },
-  "bugs": "https://github.com/busyhe/starter-monorepo/issues",
-  "license": "MIT",
   "engines": {
     "node": ">=20.10.0",
     "pnpm": ">=9.12.0"
   },
+  "packageManager": "pnpm@10.12.1",
   "pnpm": {
     "peerDependencyRules": {
       "allowedVersions": {
         "eslint": "*"
       }
     }
-  },
-  "devDependencies": {
-    "@monorepo/prettier-config": "workspace:*",
-    "@monorepo/eslint-config": "workspace:*",
-    "bumpp": "catalog:",
-    "lefthook": "catalog:",
-    "vitepress": "catalog:",
-    "unbuild": "catalog:"
   }
 }

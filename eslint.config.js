@@ -1,5 +1,5 @@
 // @ts-check
 
-import { defineConfig } from '@monorepo/eslint-config';
+import { defineConfig } from '@workspace/eslint-config';
 
 export default defineConfig();

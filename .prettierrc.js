@@ -1,1 +1,1 @@
-export { default } from '@monorepo/prettier-config';
+export { default } from '@workspace/prettier-config';
